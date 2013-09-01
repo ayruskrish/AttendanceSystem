@@ -5,8 +5,10 @@ using System.Web;
 
 namespace AMS.Models
 {
-    public class Semester : Entity
+    public class Semester
     {
+        [Required]
+        public int Id { get; set; }
         public int NumberOfSemesters { get; set; }
         public int CourseId { get; set; }
 
