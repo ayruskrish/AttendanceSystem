@@ -5,8 +5,10 @@ using System.Web;
 
 namespace AMS.Models
 {
-    public class Attendance : Entity
+    public class Attendance
     {
+        [Required]
+        public int Id { get; set; }
         public int StudentId { get; set; }
         public bool IsPresent { get; set; }
 
