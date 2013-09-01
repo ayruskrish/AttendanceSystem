@@ -133,10 +133,14 @@
     <Compile Include="Migrations\201308301013327_ChangesMadeinSemesterModel.Designer.cs">
       <DependentUpon>201308301013327_ChangesMadeinSemesterModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201309010304486_NewChangesMade.cs" />
+    <Compile Include="Migrations\201309010304486_NewChangesMade.Designer.cs">
+      <DependentUpon>201309010304486_NewChangesMade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Semester.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
@@ -174,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201308301013327_ChangesMadeinSemesterModel.resx">
       <DependentUpon>201308301013327_ChangesMadeinSemesterModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201309010304486_NewChangesMade.resx">
+      <DependentUpon>201309010304486_NewChangesMade.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
