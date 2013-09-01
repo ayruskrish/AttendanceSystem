@@ -35,6 +35,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
@@ -44,12 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\AttendanceConfiguration.cs" />
+    <Compile Include="Configuration\CourseConfiguration.cs" />
+    <Compile Include="Configuration\CustomDatabaseIntializer.cs" />
+    <Compile Include="Configuration\SemesterConfiguration.cs" />
+    <Compile Include="Configuration\StudentConfiguration.cs" />
+    <Compile Include="Configuration\TeacherConfiguration.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AMS.Models\AMS.Models.csproj">
+      <Project>{9fb1e5bc-cac1-43b2-ac9f-0729acc3b9dc}</Project>
+      <Name>AMS.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

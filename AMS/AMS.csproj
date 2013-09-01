@@ -39,9 +39,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -112,32 +109,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\AMSContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201308300935458_Initial.cs" />
-    <Compile Include="Migrations\201308300935458_Initial.Designer.cs">
-      <DependentUpon>201308300935458_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201308300950232_SemesterModelAdded.cs" />
-    <Compile Include="Migrations\201308300950232_SemesterModelAdded.Designer.cs">
-      <DependentUpon>201308300950232_SemesterModelAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201308300954548_AttendanceModelAdded.cs" />
-    <Compile Include="Migrations\201308300954548_AttendanceModelAdded.Designer.cs">
-      <DependentUpon>201308300954548_AttendanceModelAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201308301013327_ChangesMadeinSemesterModel.cs" />
-    <Compile Include="Migrations\201308301013327_ChangesMadeinSemesterModel.Designer.cs">
-      <DependentUpon>201308301013327_ChangesMadeinSemesterModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309010304486_NewChangesMade.cs" />
-    <Compile Include="Migrations\201309010304486_NewChangesMade.Designer.cs">
-      <DependentUpon>201309010304486_NewChangesMade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -160,23 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201308300935458_Initial.resx">
-      <DependentUpon>201308300935458_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201308300950232_SemesterModelAdded.resx">
-      <DependentUpon>201308300950232_SemesterModelAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201308300954548_AttendanceModelAdded.resx">
-      <DependentUpon>201308300954548_AttendanceModelAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201308301013327_ChangesMadeinSemesterModel.resx">
-      <DependentUpon>201308301013327_ChangesMadeinSemesterModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309010304486_NewChangesMade.resx">
-      <DependentUpon>201309010304486_NewChangesMade.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
