@@ -45,8 +45,30 @@ namespace AMS.Data
             modelBuilder.Configurations.Add(new StudentConfiguration());
             modelBuilder.Configurations.Add(new TeacherConfiguration());
         }
+        private void ApplyRules()
+        {
+            // Approach via @julielerman: http://bit.ly/123661P
+            foreach (var entry in this.ChangeTracker.Entries()
+                        .Where(
+                             e => e.Entity is IAuditInfo &&     // Search for All items that immpliment IAuditInfo
+                            (e.State == EntityState.Added) ||   // State of an Entity
+                            (e.State == EntityState.Modified))) // State of an Entity
+            {
+                IAuditInfo e = (IAuditInfo)entry.Entity;
+
+
+                // if something's being added
+                if (entry.State == EntityState.Added)
+                {
+                    e.ModifiedOn = DateTime.Now;
+                }
+
+                e.ModifiedOn = DateTime.Now;
+            }
+        }
         public override int SaveChanges()
         {
+            this.ApplyRules();
             return base.SaveChanges();
         }
     }

@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace AMS.Data.Configuration
 {
-    public class CustomDatabaseIntializer:CreateDatabaseIfNotExists<DataContext>
+    public class CustomDatabaseIntializer:DropCreateDatabaseAlways<DataContext>
     {
         protected override void Seed(DataContext context)
         {
